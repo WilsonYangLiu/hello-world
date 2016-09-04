@@ -131,3 +131,12 @@
 	# in any branch. Here i am in master!
 	git pull origin feature-D
 	git log --graph
+
+## Problem
+
+#### 1. How to fast-forward a branch to head?
+
+	git checkout master
+	git pull origin
+	
+will fetch and merge the origin/master branch (you may just say git pull as origin is the default).
