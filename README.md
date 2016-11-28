@@ -1,3 +1,5 @@
+# TCGADownloader ![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg) ![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)
+
 1. 初始化，内容在~/.gitconfig
 
 	git config --global user.name 'Wilson--Liu'  
