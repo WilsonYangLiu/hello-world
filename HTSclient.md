@@ -18,7 +18,6 @@ Here the DNA-seq workflow:
 	* [var](#htsclient-var)
 	* [SV](#htsclient-sv)
 	* [VEP](#htsclient-vep)
-5. [Example workflows](#example-workflows)
 
 ## Quick start
 
