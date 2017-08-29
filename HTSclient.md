@@ -94,10 +94,13 @@ The genome FASTA file should be unzipped and indexed
 #### Annotations
 
 For human genome alignment using the GRCh37 build, here i recommend the following files:  
-[homo_sapiens_refseq_vep_75.tar.gz](ftp://ftp.ensembl.org/pub/release-75/variation/VEP/homo_sapiens_refseq_vep_75.tar.gz)  
-[Broad.human.exome.b37.interval_list.gz](ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/Broad.human.exome.b37.interval_list.gz)  
-[Mills_and_1000G_gold_standard.indels.b37.vcf.gz](ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/Mills_and_1000G_gold_standard.indels.b37.vcf.gz)  
-[dbsnp_138.b37.vcf.gz](ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/dbsnp_138.b37.vcf.gz)
+ftp://ftp.ensembl.org/pub/release-75/variation/VEP/homo_sapiens_refseq_vep_75.tar.gz
+
+ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/Broad.human.exome.b37.interval_list.gz
+
+ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/Mills_and_1000G_gold_standard.indels.b37.vcf.gz
+
+ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/dbsnp_138.b37.vcf.gz
 
 In addition, the [speedseq](https://github.com/hall-lab/speedseq#reference-genome-and-annotations) repo introduced the following files:  
 [ceph18.b37.exclude.2014-01-15.bed](annotation/ceph18.b37.exclude.2014-01-15.bed)  
