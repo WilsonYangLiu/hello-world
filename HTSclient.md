@@ -109,13 +109,13 @@ In the [`HTSclient SV`](#HTSclient-sv) module, [delly](https://github.com/dellyt
 ## Usage
 
 HTSclient is a modular framework with the following components:  
-* [index](#HTSclient index) - create index file for reference fasta file
-* [align](#HTSclient align) - align FASTQ files with BWA-MEM
-* [markdup](#HTSclient markdup) - merge lane level bam files, mark duplication and produce the merged file (library level)
-* [merge](#HTSclient merge) - merge library level bam files for distribution
-* [var](#HTSclient var) - call snp/indel and CNV (WES only) variants with VarScan 2
-* [SV](#HTSclient sv) - call SV (DUP|DEL|INV|TRA|INS) variants with delly
-* [VEP](#HTSclient vep) - annotation with VEP
+* [index](#HTSclient-index) - create index file for reference fasta file
+* [align](#HTSclient-align) - align FASTQ files with BWA-MEM
+* [markdup](#HTSclient-markdup) - merge lane level bam files, mark duplication and produce the merged file (library level)
+* [merge](#HTSclient-merge) - merge library level bam files for distribution
+* [var](#HTSclient-var) - call snp/indel and CNV (WES only) variants with VarScan 2
+* [SV](#HTSclient-sv) - call SV (DUP|DEL|INV|TRA|INS) variants with delly
+* [VEP](#HTSclient-vep) - annotation with VEP
 
 These modules operate independently of each other and produce universal output formats that are compatible with external tools. HTSclient modules can also run on BAM alignments that were produced outside of the framework.
 
@@ -139,7 +139,7 @@ options:
    -h      show this message
 ```
 
-### HTSclient index
+### HTSclient-index
 
 ```
 USAGE: HTSclient index [options] <ref_fa> <ref_dict>
@@ -158,7 +158,7 @@ global options:
    -h       show this message
 ```
 
-### HTSclient align
+### HTSclient-align
 
 ```
 USAGE: HTSclient align [options] <ref_fa> <in1.fq> [<in2.fq>]
@@ -190,7 +190,7 @@ global options:
    -h       show this message
 ```
 
-### HTSclient markdup
+### HTSclient-markdup
 
 ```
 USAGE: HTSclient markdup [options] <bam_list>
@@ -206,7 +206,7 @@ options:
    -h       show this message
 ```
 
-### HTSclient merge
+### HTSclient-merge
 
 ```
 USAGE: HTSclient merge [options] <bam_list>
@@ -227,7 +227,7 @@ global options:
    -h       show this message
 ```
 
-### HTSclient var
+### HTSclient-var
 
 ```
 USAGE: HTSclient var [options] <tumor_list> [<normal_list>]
@@ -267,7 +267,7 @@ global options:
    -h       show this message
 ```
 
-### HTSclient var
+### HTSclient-SV
 
 ```
 USAGE: HTSclient SV [options] <ref_fa> <bam_list> [<control_list>]
@@ -304,7 +304,7 @@ global options:
    -h       show this message
 ```
 
-### HTSclient VEP
+### HTSclient-VEP
 
 ```
 USAGE: HTSclient VEP [options] <in_file> <out_file>
@@ -341,3 +341,4 @@ global options:
    -v        verbose
    -h        show this message
 ```
+
