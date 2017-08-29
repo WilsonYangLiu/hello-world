@@ -99,11 +99,11 @@ ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/Broad.human.e
 ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/Mills_and_1000G_gold_standard.indels.b37.vcf.gz  
 ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/dbsnp_138.b37.vcf.gz  
 
-In addition, the ![speedseq](https://github.com/hall-lab/speedseq#reference-genome-and-annotations) repo introduced the following files:  
-![ceph18.b37.exclude.2014-01-15.bed](annotation/ceph18.b37.exclude.2014-01-15.bed)  
-![ceph18.b37.include.2014-01-15.bed](annotation/ceph18.b37.include.2014-01-15.bed)
+In addition, the [speedseq](https://github.com/hall-lab/speedseq#reference-genome-and-annotations) repo introduced the following files:  
+[ceph18.b37.exclude.2014-01-15.bed](annotation/ceph18.b37.exclude.2014-01-15.bed)  
+[ceph18.b37.include.2014-01-15.bed](annotation/ceph18.b37.include.2014-01-15.bed)
 
-In the [`HTSclient SV`](#HTSclient-sv) module, ![delly](https://github.com/dellytools/delly) recommend excluding the telomere and centromere genomic regions:  
+In the [`HTSclient SV`](#HTSclient-sv) module, [delly](https://github.com/dellytools/delly) recommend excluding the telomere and centromere genomic regions:  
 [BUIDING]
 
 ## Usage
