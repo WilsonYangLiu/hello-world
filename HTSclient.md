@@ -11,13 +11,13 @@ Here the DNA-seq workflow:
 2. [Installation](#installation)
 3. [Reference genome and annotations](#reference-genome-and-annotations)
 4. [Usage](#usage)
-	* [index](#HTSclient-index)
-	* [align](#HTSclient-align)
-	* [markdup](#HTSclient-markdup)
-	* [merge](#HTSclient-merge)
-	* [var](#HTSclient-var)
-	* [SV](#HTSclient-sv)
-	* [VEP](#HTSclient-vep)
+	* [index](#htsclient-index)
+	* [align](#htsclient-align)
+	* [markdup](#htsclient-markdup)
+	* [merge](#htsclient-merge)
+	* [var](#htsclient-var)
+	* [SV](#htsclient-sv)
+	* [VEP](#htsclient-vep)
 5. [Example workflows](#example-workflows)
 
 ## Quick start
@@ -103,7 +103,7 @@ In addition, the [speedseq](https://github.com/hall-lab/speedseq#reference-genom
 [ceph18.b37.exclude.2014-01-15.bed](annotation/ceph18.b37.exclude.2014-01-15.bed)  
 [ceph18.b37.include.2014-01-15.bed](annotation/ceph18.b37.include.2014-01-15.bed)
 
-In the [`HTSclient SV`](#HTSclient-sv) module, [delly](https://github.com/dellytools/delly) recommend excluding the telomere and centromere genomic regions:  
+In the [`HTSclient SV`](#htsclient-sv) module, [delly](https://github.com/dellytools/delly) recommend excluding the telomere and centromere genomic regions:  
 [BUIDING]
 
 ## Usage
