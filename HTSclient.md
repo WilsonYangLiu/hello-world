@@ -109,13 +109,13 @@ In the [`HTSclient SV`](#HTSclient-sv) module, [delly](https://github.com/dellyt
 ## Usage
 
 HTSclient is a modular framework with the following components:  
-* [index](#HTSclient-index) - create index file for reference fasta file
-* [align](#HTSclient-align) - align FASTQ files with BWA-MEM
-* [markdup](#HTSclient-markdup) - merge lane level bam files, mark duplication and produce the merged file (library level)
-* [merge](#HTSclient-merge) - merge library level bam files for distribution
-* [var](#HTSclient-var) - call snp/indel and CNV (WES only) variants with VarScan 2
-* [SV](#HTSclient-sv) - call SV (DUP|DEL|INV|TRA|INS) variants with delly
-* [VEP](#HTSclient-vep) - annotation with VEP
+* [index](#htsclient-index) - create index file for reference fasta file
+* [align](#htsclient-align) - align FASTQ files with BWA-MEM
+* [markdup](#htsclient-markdup) - merge lane level bam files, mark duplication and produce the merged file (library level)
+* [merge](#htsclient-merge) - merge library level bam files for distribution
+* [var](#htsclient-var) - call snp/indel and CNV (WES only) variants with VarScan 2
+* [SV](#htsclient-sv) - call SV (DUP|DEL|INV|TRA|INS) variants with delly
+* [VEP](#htsclient-vep) - annotation with VEP
 
 These modules operate independently of each other and produce universal output formats that are compatible with external tools. HTSclient modules can also run on BAM alignments that were produced outside of the framework.
 
