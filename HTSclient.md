@@ -341,4 +341,3 @@ global options:
    -v        verbose
    -h        show this message
 ```
-
