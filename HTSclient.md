@@ -139,7 +139,7 @@ options:
    -h      show this message
 ```
 
-### HTSclient-index
+### HTSclient index
 
 ```
 USAGE: HTSclient index [options] <ref_fa> <ref_dict>
@@ -158,7 +158,7 @@ global options:
    -h       show this message
 ```
 
-### HTSclient-align
+### HTSclient align
 
 ```
 USAGE: HTSclient align [options] <ref_fa> <in1.fq> [<in2.fq>]
@@ -190,7 +190,7 @@ global options:
    -h       show this message
 ```
 
-### HTSclient-markdup
+### HTSclient markdup
 
 ```
 USAGE: HTSclient markdup [options] <bam_list>
@@ -206,7 +206,7 @@ options:
    -h       show this message
 ```
 
-### HTSclient-merge
+### HTSclient merge
 
 ```
 USAGE: HTSclient merge [options] <bam_list>
@@ -227,7 +227,7 @@ global options:
    -h       show this message
 ```
 
-### HTSclient-var
+### HTSclient var
 
 ```
 USAGE: HTSclient var [options] <tumor_list> [<normal_list>]
@@ -267,7 +267,7 @@ global options:
    -h       show this message
 ```
 
-### HTSclient-SV
+### HTSclient SV
 
 ```
 USAGE: HTSclient SV [options] <ref_fa> <bam_list> [<control_list>]
@@ -304,7 +304,7 @@ global options:
    -h       show this message
 ```
 
-### HTSclient-VEP
+### HTSclient VEP
 
 ```
 USAGE: HTSclient VEP [options] <in_file> <out_file>
