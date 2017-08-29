@@ -57,7 +57,7 @@ Here the DNA-seq workflow:
 
 #### Configuration
 
-System paths to HTSclient's component software are specified in the [HTSclient.config](HTSclient.config) file, which should reside in the same directory as the HTSclient executable
+System paths to HTSclient's component software are specified in the [HTSclient.config](HTSclient.config) file, which should reside in the same directory as the HTSclient executable.
 
 #### Install core components
 
@@ -89,22 +89,22 @@ ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/human_g1k_v37.f
 2. Ensembl GRCh37:  
 ftp://ftp.ensembl.org/pub/release-75/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.75.dna.primary_assembly.fa.gz
 
-The genome FASTA file should be unzipped and indexed
+The genome FASTA file should be unzipped and indexed.
 
 #### Annotations
 
 For human genome alignment using the GRCh37 build, here i recommend the following files:  
 ftp://ftp.ensembl.org/pub/release-75/variation/VEP/homo_sapiens_refseq_vep_75.tar.gz  
-ftp://ftp.broadinstitute.org/bundle/bundle/b37/Broad.human.exome.b37.interval_list.gz  
-ftp://ftp.broadinstitute.org/bundle/bundle/b37/Mills_and_1000G_gold_standard.indels.b37.vcf.gz
-ftp://ftp.broadinstitute.org/bundle/bundle/b37/dbsnp_138.b37.vcf.gz
+ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/Broad.human.exome.b37.interval_list.gz  
+ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/Mills_and_1000G_gold_standard.indels.b37.vcf.gz  
+ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/bundle/b37/dbsnp_138.b37.vcf.gz
 
 In addition, the [speedseq](https://github.com/hall-lab/speedseq#reference-genome-and-annotations) repo introduced the following files:  
 [ceph18.b37.exclude.2014-01-15.bed](annotation/ceph18.b37.exclude.2014-01-15.bed)  
 [ceph18.b37.include.2014-01-15.bed](annotation/ceph18.b37.include.2014-01-15.bed)
 
 In the [`HTSclient SV`](#htsclient-sv) module, [delly](https://github.com/dellytools/delly) recommend excluding the telomere and centromere genomic regions:  
-[BUIDING]
+[BUIDING]...
 
 ## Usage
 
@@ -154,7 +154,7 @@ bwa index options:
 
 global options:
    -v       verbose
-   -j STR   java argument, which should be quoted. [\"-Xmx2g\"]
+   -j STR   java argument, which should be quoted. ["-Xmx2g"]
    -h       show this message
 ```
 
@@ -172,7 +172,7 @@ positional args:
 
 alignment options:
    -o STR   output prefix [lane]
-   -R STR   read group header line. (required) [\"RGID:RGPL:RGPU:RGLB:RGSM\"]
+   -R STR   read group header line. (required) ["RGID:RGPL:RGPU:RGLB:RGSM"]
    -p       first fastq file consists of interleaved paired-end sequences
    -t INT   threads [2]
    -T DIR   temp directory [./output_prefix.XXXXXXXXXXXX]
@@ -186,7 +186,7 @@ base quality scores recalibration
 
 global options:
    -v       verbose
-   -j STR   java argument, which should be quoted. [\"-Xmx2g\"]
+   -j STR   java argument, which should be quoted. ["-Xmx2g"]
    -h       show this message
 ```
 
@@ -202,7 +202,7 @@ options:
    -o STR   output prefix [lib]
    -s SRT   assume sorted by coodinate (true|false) [true]
    -v       verbose
-   -j STR   java argument, which should be quoted. [\"-Xmx2g\"]
+   -j STR   java argument, which should be quoted. ["-Xmx2g"]
    -h       show this message
 ```
 
@@ -223,7 +223,7 @@ indel realignment options:
 
 global options:
    -v       verbose
-   -j STR   java argument, which should be quoted. [\"-Xmx2g\"]
+   -j STR   java argument, which should be quoted. ["-Xmx2g"]
    -h       show this message
 ```
 
@@ -244,16 +244,16 @@ required options:
    
 options:
    -f STR   reference fasta file (required)
-   -m STR   mpileup arguments, which should be quoted, e.g. \"-f ref_fa\"
-   -g STR   basic VarScan arguments, seperated by colon. [\"8:15:0.08:0.75:0.95\"]
-              format: \"Min coverage\":\"Min base qual\":\"Min var freq\":\"Min freq for hom\":\"p-val\"
+   -m STR   mpileup arguments, which should be quoted, e.g. "-f ref_fa"
+   -g STR   basic VarScan arguments, seperated by colon. ["8:15:0.08:0.75:0.95"]
+              format: "Min coverage":"Min base qual":"Min var freq":"Min freq for hom":"p-val"
 
  For somatic:
-   -s STR   VarScan arguments for somatic, seperated by colon. [\"8:6:0.95:0.05\"]
-              format: \"Min normal coverage\":\"Min tumor coverage\":\"p-val for heterozygote\":\"p-val for somatic\". 
+   -s STR   VarScan arguments for somatic, seperated by colon. ["8:6:0.95:0.05"]
+              format: "Min normal coverage":"Min tumor coverage":"p-val for heterozygote":"p-val for somatic". 
    -p STR   this options used for isolate Germline/LOH/Somatic calls from output (indel OR snp)
-              arguments seperated by colon. [\"0.10:0.05:0.07\"]
-              format: \"Min freq in tumor\":\"Mam freq in normal\":\"p-val for HC\".
+              arguments seperated by colon. ["0.10:0.05:0.07"]
+              format: "Min freq in tumor":"Mam freq in normal":"p-val for HC".
 
  For CNV:
    Not implement yet
@@ -263,7 +263,7 @@ global options:
    -a       annotation flag, default to not annotate
    -o STR   output prefix [SM]
    -v       verbose
-   -j STR   java argument, which should be quoted. [\"-Xmx2g\"]
+   -j STR   java argument, which should be quoted. ["-Xmx2g"]
    -h       show this message
 ```
 
@@ -281,12 +281,12 @@ positional args:
                   the matched tumor-control pair share the same position in both list
 
 generic options:
-   -o STR   output prefix. If you need vcf output, use \`bcftools view' for file conversion [ID]
+   -o STR   output prefix. If you need vcf output, use `bcftools view' for file conversion [ID]
    -T STR   analysis type (germline|somatic). [germline]
    -t STR   SV type (DEL|DUP|INV|BND|INS) [DEL]
    -x STR   file with regions (such as centromere and telomere) to exclude.
    -D STR   discovery options, seperated by colon. [1:9]
-              format: \"min. paired-end mapping qual\":\"insert size cutoff\"
+              format: "min. paired-end mapping qual":"insert size cutoff"
    -u INT   min. mapping quality for genotyping. [5]
 
 somatic options:
@@ -294,9 +294,9 @@ somatic options:
               (as in the VCF/BCF file) and the second column is either tumor or control
 
 merge options:
-   -M STR   delly merge options, seperated by colon. [\"500:1000000:500:0.5\"]
-              format: \"min. SV size\":\"max. SV size\":\"max. breakpoint offset\":\"min. reciprocal overlap\"
-   -B STR   bcftools merge arguments, which should be quoted, e.g. \"-0\"
+   -M STR   delly merge options, seperated by colon. ["500:1000000:500:0.5"]
+              format: "min. SV size":"max. SV size":"max. breakpoint offset":"min. reciprocal overlap"
+   -B STR   bcftools merge arguments, which should be quoted, e.g. "-0"
 
 global options:
    -f       apply SV filter
@@ -317,25 +317,25 @@ options:
    -t INT    Enable forking, using the specified number of forks. [1]
    -s STR    Species for your data [homo_sapiens]
    -a STR    Select the assembly version to use if more than one available [GRCh37]
-   -I STR    Other input options, must be quoted. [\"--force_overwrite --stats_text\"]
+   -I STR    Other input options, must be quoted. ["--force_overwrite --stats_text"]
                --force_overwrite: force the overwrite of the existing file
                --stats_text: generate a plain text stats file in place of the HTML
                other options please see the VEP website
-   -d STR    Specify the base cache/plugin directory to use. [\"\$HOME/.vep/\"]
-   -C STR    Other cache options, must be quoted. [\"--cache --offline --merged\"]
+   -d STR    Specify the base cache/plugin directory to use. ["\$HOME/.vep/"]
+   -C STR    Other cache options, must be quoted. ["--cache --offline --merged"]
                --cache: enables use of the cache
                --offline: enable offline mode
                --merged: use the merged Ensembl and RefSeq cache.
                other options please see the VEP website
    -T STR    Output annotation term options, must be quoted. 
-               [\"--sift b --polyphen b --symbol --numbers --biotype --total_length\"[ | \"--everything\"]]
+               ["--sift b --polyphen b --symbol --numbers --biotype --total_length"[ | "--everything"]]
                other options please see the VEP website
-   -L STR    Co-located variants options, must be quoted. [\"--check_existing\"]
+   -L STR    Co-located variants options, must be quoted. ["--check_existing"]
                --check_existing: checks for the existence of known variants that are co-located with your input
                other options please see the VEP website
    -f [0|1|STR]
              Configure the output format. 0 for disable this option; 1 for enable; and STR for customize output. [0]
-               Note that if you ues SRT, the term should already be contained in \"-T STR\" and \"-L STR\"
+               Note that if you ues SRT, the term should already be contained in "-T STR" and "-L STR"
 
 global options:
    -v        verbose
