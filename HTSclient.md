@@ -28,11 +28,6 @@ Here the DNA-seq workflow:
   make
   ```
 
-  Uninstall HTSclient:  
-  ```
-  make clean
-  ```
-
 2. Run the [example script](example/example_code.sh)  
 	```
 	cd example
@@ -125,6 +120,11 @@ After finishing above steps, you can now install HTSclient by just:
 git clone https://github.com/WilsonYangLiu/HTSclient.git
 cd HTSclient
 make
+```
+
+Uninstall HTSclient:  
+```
+make clean
 ```
 
 ## Reference genome and annotations
