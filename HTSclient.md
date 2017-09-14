@@ -22,7 +22,16 @@ Here the DNA-seq workflow:
 ## Quick start
 
 1. Install  
-[BUIDING]...
+  ```
+  git clone https://github.com/WilsonYangLiu/HTSclient.git
+  cd HTSclient
+  make
+  ```
+
+  Uninstall HTSclient:  
+  ```
+  make clean
+  ```
 
 2. Run the [example script](example/example_code.sh)  
 	```
@@ -56,15 +65,18 @@ Here the DNA-seq workflow:
 
 #### Configuration
 
-System paths to HTSclient's component software are specified in the [HTSclient.config](HTSclient.config) file, which should reside in the same directory as the HTSclient executable.
+System paths to HTSclient's component software are specified in the [HTSclient.config](bin/HTSclient.config) file, which should reside in the same directory as the HTSclient executable.
 
 #### Install core components
+
+You don't need to install these softwares by youself, HTSclient will attempt to install these components.
 
 * BWA (http://bio-bwa.sourceforge.net/)
 * Samtools (http://www.htslib.org)
 * Picard (http://broadinstitute.github.io/picard/)
 * VarScan2 (http://dkoboldt.github.io/varscan/)
 * Delly (https://github.com/dellytools/delly)
+* Bcftools (http://www.htslib.org)
 * Vawk (https://github.com/cc2qe/vawk)
 
 #### Install optional components
@@ -73,13 +85,53 @@ System paths to HTSclient's component software are specified in the [HTSclient.c
 * Variant Effect Predictor (http://www.ensembl.org/info/docs/tools/vep/index.html)
 * CNVnator (https://github.com/abyzovlab/CNVnator)
 
+##### GATK
+
+GenomeAnalysisTK already reside in [src](src/GenomeAnalysisTK) and HTSclient will install it automaticly.
+
+##### Variant Effect Predictor
+
+See http://www.ensembl.org/info/docs/tools/vep/index.html for more details
+
+##### CNVnator
+
+CNVnator requires the ROOT package as a prerequiste (https://root.cern.ch/drupal/)
+
+1. Install the ROOT package
+  ```
+  wget https://root.cern.ch/download/root_v6.10.02.source.tar.gz
+  tar -zxvf root_v6.10.02.source.tar.gz
+  cd root
+  ./configure --prefix=$PWD
+  make
+  ```
+
+2. Source thisroot.sh
+  ```
+  source /pathto/root/bin/thisroot.sh
+  ```
+
+3. Compile CNVnator from the SpeedSeq directory
+  ```
+  cd $SPEEDSEQ_DIR
+  make cnvnator
+  ```
+
 #### Install HTSclient
 
-[BUIDING]...
+After finishing above steps, you can now install HTSclient by just:
+
+```
+git clone https://github.com/WilsonYangLiu/HTSclient.git
+cd HTSclient
+make
+```
 
 ## Reference genome and annotations
 
 #### Reference genome
+
+Either 1000genomes or Ensembl GRCh37:
 
 1. 1000genomes:  
 ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/human_g1k_v37.fasta.gz  
@@ -340,3 +392,4 @@ global options:
    -v        verbose
    -h        show this message
 ```
+
