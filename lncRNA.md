@@ -71,14 +71,14 @@ lncRNA_new TEST_lncRNA TEST_RNA TEST_ChIP test
 * start_lncRNA.bash: 任务提交脚本
 ### 设置
 1. inputs/<ChIP_prj>: Your ChIP-Seq analysis results. Make sure you have peak files in bed format in your `inputs/<ChIP_prj>/bed` directory. You can generate them by performing your own ChIP-Seq analysis. Otherwise, the bed files can be obtained from well-known projects, for example `ENCODE` project
-2. inputs/<RNA_prj>: Make sure this link link properly with the directory of your RNA-Seq_Standard project you set in STEP 1
+2. inputs/<RNA_prj>: Make sure this link link properly with the directory of your `RNA-Seq_Standard` project you set in `STEP 1`
 3. inputs/group_info.txt: Please follow this example file to set up your sample sheet. Please make sure you match your sample name with the sample name you used in `RNA-Seq_Standard` pipeline (Sample name should match the directory name in the `RNA-Seq/pipeline/alignment/` folder and `RNA-Seq/pipeline/cufflinks`)
 4. inputs/params.bash: Please change the parameters as your desire in this file
    * [description of setting parameters] Building
 5. inputs/custom-bashrc: this file set up the path to all necessary dependencies. Please check `inputs/system_requirement.txt` for all dependencies requirement
-6. [Advanced]: If you are working on a different reference version or species, you may need to set up referenceFiles directory:
-   * If you found the `referenceFiles` is a broken link, it means you should set up `referenceFiles` by yourself. Delete `referenceFiles` and create a new `referenceFiles` directory. Follow the `code/build_referenceFiles.bash` script (set up the necessary files in `referenceFiles`) and run this command at your project folder `<analysis_dir>`
-   * You can obtain the files mentioned in build_referenceFiles.bash from well-known projects, for example `GENCODE` project
+6. [Advanced]: If you are working on a different reference version or species, you may need to set up `referenceFiles` directory:
+   * If you found the `referenceFiles` is a broken link, it means you provide a wrong ID for the species. Otherwise, you may should set up `referenceFiles` by yourself. Delete `referenceFiles` and create a new `referenceFiles` directory. Follow the `code/build_referenceFiles.bash` script (set up the necessary files in `referenceFiles`) and run this command at your project folder `<analysis_dir>`
+   * You can obtain the files mentioned in `build_referenceFiles.bash` from well-known projects, for example `GENCODE` project
    * Please check if you have replaced all the files in this directory as your own desire. Also, please make sure you use the same reference version or species in `inputs/RNA-Seq/referenceFiles`
    * Please don't forget to change your `inputs/params.bash` file if you use a different reference version or species and finished setting up the `referenceFiles` directory
 ### 任务提交
