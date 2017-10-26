@@ -77,7 +77,7 @@ lncRNA_new TEST_lncRNA TEST_RNA TEST_ChIP test
    * [description of setting parameters] Building
 5. inputs/custom-bashrc: this file set up the path to all necessary dependencies. Please check `inputs/system_requirement.txt` for all dependencies requirement
 6. [Advanced]: If you are working on a different reference version or species, you may need to set up `referenceFiles` directory:
-   * If you found the `referenceFiles` is a broken link, it means you provide a wrong ID for the species. Otherwise, you may should set up `referenceFiles` by yourself. Delete `referenceFiles` and create a new `referenceFiles` directory. Follow the `code/build_referenceFiles.bash` script (set up the necessary files in `referenceFiles`) and run this command at your project folder `<analysis_dir>`
+   * If you found the `referenceFiles` is a broken link, it means you provide a wrong ID for the species. If not, you should set up `referenceFiles` by yourself. Delete `referenceFiles` and create a new `referenceFiles` directory. Follow the `code/build_referenceFiles.bash` script (set up the necessary files in `referenceFiles`) and run this command at your project folder `<analysis_dir>`
    * You can obtain the files mentioned in `build_referenceFiles.bash` from well-known projects, for example `GENCODE` project
    * Please check if you have replaced all the files in this directory as your own desire. Also, please make sure you use the same reference version or species in `inputs/RNA-Seq/referenceFiles`
    * Please don't forget to change your `inputs/params.bash` file if you use a different reference version or species and finished setting up the `referenceFiles` directory
@@ -87,7 +87,39 @@ yhbatch -N 1 start_lncRNA.bash
 ```
 `start_lncRNA.bash` 文件中, 修改 `NSLOTS` 变量, 指定所需线程数  
 ### 结果
-pipeline 的文件结构为:   
-
-
+``_##_<NAME>`` 的文件结构为:   
+```
+|-- _01_ChIP-Seq
+|-- _01_RNA-Seq
+|-- _02_cuffmerge
+   |-- merged.gtf, assemblies_list.txt, run.bash
+|-- _03_identify: Identify lncRNA
+|-- _04_whole_assembly
+   |-- all.gtf
+|-- _05_coding_potential: Accessment of potential coding region by using CPAT tool
+   |-- gencode-lncRNA*
+   |-- gencode-mRNA*
+   |-- lncRNA*
+   |-- novel-lncRNA*
+|-- _05_featureCounts
+   |-- <sample>: counts.txt, featureCounts.txt, featureCounts.txt.summary, run.bash
+   |-- *out
+   |-- raw_count.txt
+|-- _06_annotate: annotate lncRNA from other annotation files
+|-- _06_summarize: run DESeq2 by user-defined group
+|-- _07_fpkm_cutoff
+|-- _07_peak_overlap
+|-- _08_integrate_DE
+|-- _08_integrate_HistoneCombine
+|-- _09_pie_matrix_DE
+|-- _09_pie_matrix_peak
+|-- _10_figures
+|-- _10_snapshot
+|-- _10_tracks
+|-- _11_report: a HTML report
+```
+pipeline 的文件结构除了以上 ``_##_<NAME>`` 部分, 还包括:  
+```
+|-- <DATE>_<TIME>: the Log files, check these files if you don’t have seen any expected file
+```
 
