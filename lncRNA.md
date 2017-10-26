@@ -62,7 +62,7 @@ USAGE: lncRNA_new <analysis_dir> <RNA_prj> <ChIP_prj> [species_name: hg19]
 lncRNA_new TEST_lncRNA TEST_RNA TEST_ChIP test
 ```  
 在当前目录下, 可以看到 TEST_lncRNA 项目文件夹. 该文件夹应当包含以下内容  
-* _##_<NAME>: ## 表示数字, 这些文件夹表示运行的中间结果, 其中 `_11_report` 包含 HTML 报告
+* ``_##_<NAME>``: ## 表示数字, 这些文件夹表示运行的中间结果, 其中 `_11_report` 包含 HTML 报告
 * cdoe: 程序主目录
 * input: 
 * pipeline: 运行结果所在目录
