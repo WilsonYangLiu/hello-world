@@ -107,12 +107,20 @@ yhbatch -N 1 start_lncRNA.bash
    |-- raw_count.txt
 |-- _06_annotate: annotate lncRNA from other annotation files
 |-- _06_summarize: run DESeq2 by user-defined group
-|-- _07_fpkm_cutoff
-|-- _07_peak_overlap
-|-- _08_integrate_DE
-|-- _08_integrate_HistoneCombine
-|-- _09_pie_matrix_DE
-|-- _09_pie_matrix_peak
+   |-- fpkm_table.txt
+   |-- norm_count.txt
+   |-- lncRNA_fpkm_table.txt
+   |-- mRNA_fpkm_table.txt
+|-- _07_fpkm_cutoff： Calculating FPKM Cutoff
+   |-- Group
+|-- _07_peak_overlap: Overlapping ChIP-Seq peaks grouping by user-defined group
+   |-- Group
+|-- _08_integrate_DE： Integrating FPKM cutoff and Differential Expression Analysis result grouping by user-defined group
+   |-- Group
+|-- _08_integrate_HistoneCombine： Integrating FPKM cutoff and ChIP-Seq peaks overlap grouping by user-defined group
+   |-- Group
+|-- _09_pie_matrix_DE: Making Pie-matrix
+|-- _09_pie_matrix_peak: Making Pie-matrix
 |-- _10_figures
 |-- _10_snapshot
 |-- _10_tracks
