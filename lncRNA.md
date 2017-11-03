@@ -50,6 +50,7 @@ pipeline 的文件结构为:
 |-- summarize
    |-- <group>: align_summary.txt, raw_count.txt
 |-- report & report.tar.gz: You can download this file and create a HTML report in your machine
+       If you wish create HTML report in Tianhe2, do not foget to uncomment the necessary line in `report/run.sh`
 |-- <DATE>_<TIME>: the Log files, check these files if you don’t have seen any expected file
 ```
 ## 二 lncRNA-screen
@@ -70,7 +71,7 @@ lncRNA_new TEST_lncRNA TEST_RNA TEST_ChIP test
 * run.bash
 * start_lncRNA.bash: 任务提交脚本
 ### 设置
-1. inputs/<ChIP_prj>: Your ChIP-Seq analysis results. Make sure you have peak files in bed format in your `inputs/<ChIP_prj>/bed` directory. You can generate them by performing your own ChIP-Seq analysis. Otherwise, the bed files can be obtained from well-known projects, for example `ENCODE` project
+1. inputs/<ChIP_prj>: Your ChIP-Seq analysis results. Make sure you have peak files in bed format in your `inputs/<ChIP_prj>/bed` directory. You can generate them by performing your own ChIP-Seq analysis.
 2. inputs/<RNA_prj>: Make sure this link link properly with the directory of your `RNA-Seq_Standard` project you set in `STEP 1`
 3. inputs/group_info.txt: Please follow this example file to set up your sample sheet. Please make sure you match your sample name with the sample name you used in `RNA-Seq_Standard` pipeline (Sample name should match the directory name in the `RNA-Seq/pipeline/alignment/` folder and `RNA-Seq/pipeline/cufflinks`)
 4. inputs/params.bash: Please change the parameters as your desire in this file
@@ -94,13 +95,15 @@ yhbatch -N 1 start_lncRNA.bash
 |-- _02_cuffmerge
    |-- merged.gtf, assemblies_list.txt, run.bash
 |-- _03_identify: Identify lncRNA
+   |-- 4_novel_nc.gtf
 |-- _04_whole_assembly
    |-- all.gtf
 |-- _05_coding_potential: Accessment of potential coding region by using CPAT tool
    |-- gencode-lncRNA*
    |-- gencode-mRNA*
-   |-- lncRNA*
    |-- novel-lncRNA*
+   |-- lncRNA.bed, lncRNA_for_table.txt
+   |-- mRNA.bed, mRNA_for_table.txt
 |-- _05_featureCounts
    |-- <sample>: counts.txt, featureCounts.txt, featureCounts.txt.summary, run.bash
    |-- *out
